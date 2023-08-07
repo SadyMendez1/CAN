@@ -1,0 +1,222 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #68bb7e;
+    overflow: hidden;
+}
+
+/* SVG Blobs */
+
+svg{
+    position: absolute;
+    z-index: -1;
+}
+
+svg:nth-child(1) {
+    top: -250px;
+    left: -200px;
+    width: 800px;
+    height: 800px;
+}
+
+/* Círculo */
+
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0B3B18;
+    clip-path: circle(650px at left 750px);
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Header */
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 100px;
+}
+
+header .logo{
+    color: #1b1b1b;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+header .nav{
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+}
+
+header .nav li,
+header .btnGroup li{
+    padding: 20px;
+}
+
+header .nav li a{
+    text-decoration: none;
+    color: #1b1b1b;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+header .btnGroup{
+    display: flex;
+    list-style: none;
+}
+
+header .btnGroup li .btnLogin {
+    text-decoration: none;
+    color: #1b1b1b;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+header .btnGroup li .btnRegistro {
+    text-decoration: none;
+    padding: 12px 23px;
+    color: #fff;
+    background: #126b2a;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+header .btnGroup li .btnRegistro:hover {
+    background: #0B3B18;
+}
+
+/* Contenido */
+
+.contenido {
+    position: relative;
+    width: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenido .error404 span {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 10em;
+    padding: 10px;
+    color: #1b1b1b;
+    transition: 0.3s;
+    text-shadow: 1px 1px 1px #ccc,
+                1px 2px 1px #ccc,
+                1px 3px 1px #ccc,
+                1px 4px 1px #ccc,
+                1px 5px 1px #ccc,
+                1px 6px 1px #ccc,
+                1px 7px 1px #ccc,
+                1px 8px 1px #ccc,
+                1px 9px 1px #ccc,
+                1px 10px 1px #ccc,
+                1px 18px 6px rgba(16, 14, 14, 0.4),
+                1px 22px 10px rgba(16, 14, 14, 0.2),
+                1px 25px 35px rgba(16, 14, 14, 0.2),
+                1px 30px 60px rgba(16, 14, 14, 0.4);
+}
+
+.contenido h2 {
+    color: #1b1b1b;
+    font-size: 2em;
+    font-weight: bolder;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+.contenido p {
+    text-align: center;
+    line-height: 1.7;
+}
+
+.contenido a {
+    text-decoration: none;
+    padding: 12px 23px;
+    color: #fff;
+    background: #f19f4d;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.contenido a ion-icon {
+    margin-left: 10px;
+}
+
+.contenido a:hover {
+    background: #cb7116;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .enlaces {
+    display: flex;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer .enlaces li {
+    padding: 20px;
+}
+
+footer .enlaces li a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #1b1b1b;
+    font-weight: 500;
+}
+
+footer .copyright p {
+    color: #1b1b1b;
+    font-weight: 500;
+}
