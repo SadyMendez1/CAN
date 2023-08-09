@@ -72,12 +72,17 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 
-                <div class="option">
+                <!--<div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
                     <button onclick="loadPageCli()"><h4>CRUD CLIENTES</h4></button>
+                </div>-->
+
+                <a href="/CRUD_MYSQLI-clientes/index.php">
+                <div class="option">
+                    <i class="far fa-file" title="Portafolio"></i>
+                    <h4>CRUD CLIENTESS</h4>
                 </div>
-
-
+            </a>
 
 
             
