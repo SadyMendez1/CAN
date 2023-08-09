@@ -16,7 +16,7 @@
     <title>Editar Categoría</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/estilos/estilos.css">
+    <link rel="stylesheet" href="/CRUD_MYSQLI-categoria/estilos/estilos.css">
 
 </head>
 
@@ -56,9 +56,10 @@
                 <label class="form-label text-white">Nombre de la Categoría</label>
                 <input type="text" class="form-control" placeholder="Nombre de la categoría" name="NoCat" value="<?php echo $fila['nombre']?>">
             </div>
+            
             <div class="mb-3">
-                <label class="form-label text-white">Imagen</label>
-                <input type="text" class="form-control" placeholder="Imagen" name="Img" value="<?php echo $fila['imagen']?>">
+                <label class="custom-file-label" for="exampleInputFile">Elige Imagen</label>             
+                <input type="file" class="custom-file-input" id="Img" value="<?php echo $fila['imagen']?>">
             </div>
             
             <div class="container text-center">

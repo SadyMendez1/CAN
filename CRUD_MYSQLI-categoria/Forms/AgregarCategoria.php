@@ -7,7 +7,7 @@
     <title>Agregar Categoría</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="/estilos/estilos.css">
+    <link rel="stylesheet" href="/CRUD_MYSQLI-categoria/estilos/estilos.css">
 
 </head>
 
@@ -45,9 +45,8 @@
                 <input type="text" class="form-control" placeholder="Nombre de la categoría" name="NoCat">
             </div>
 
-            
             <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Imagen" name="Img">
+                <input type="file" class="custom-file-input" placeholder="Elige Imagen" name="Img">
             </div>
 
             <div class="container text-center">
