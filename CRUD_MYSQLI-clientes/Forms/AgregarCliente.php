@@ -23,7 +23,7 @@
 
     <!--Header-->
     <header>
-    <a href="index.html" class="logo">CAN</a>
+    <a href="/l_page/inicio.php" class="logo">CAN</a>
     </header>
     <!--Fin Header-->
 

@@ -31,6 +31,18 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="/l_page/estilos/estilos_.css">
 
 <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+		function loadPageCli() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("content").innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "/CRUD_MYSQLI-clientes/index.php", true);
+			xhttp.send();
+		}
+	</script>
 
 </head>
 
@@ -58,12 +70,16 @@ if (!isset($_SESSION['loggedin'])) {
 
         <div class="options__menu">	
 
-        <a href="/CRUD_MYSQLI-clientes/index.php">
+
+
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
-                    <h4>CRUD CLIENTES</h4>
+                    <button onclick="loadPageCli()"><h4>CRUD CLIENTES</h4></button>
                 </div>
-            </a>
+
+
+
+
             
             <a href="/CRUD_MYSQLI-employees/index.php">
                 <div class="option">
@@ -126,6 +142,10 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
 
     <main>
+
+    <div id="content" style="width: 100%;
+  height: 100%;"></div>
+
         <h1>Página de inicio del Sistema CAN</h1><br>
 
         <p>Se bienvenido, <?= $_SESSION['name'] ?>.</p>

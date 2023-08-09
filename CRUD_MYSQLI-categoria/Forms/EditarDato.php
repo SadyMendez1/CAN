@@ -34,7 +34,7 @@
 
     <!--Header-->
     <header>
-    <a href="index.html" class="logo">CAN </a>
+    <a href="/l_page/inicio.php" class="logo">CAN </a>
     </header>
     <!--Fin Header-->
 
@@ -56,10 +56,12 @@
                 <label class="form-label text-white">Nombre de la Categoría</label>
                 <input type="text" class="form-control" placeholder="Nombre de la categoría" name="NoCat" value="<?php echo $fila['nombre']?>">
             </div>
-            
-            <div class="mb-3">
-                <label class="custom-file-label" for="exampleInputFile">Elige Imagen</label>             
+
+            <div class="input-group">
+            <div class="custom-file">      
+                <label class="custom-file-label" for="exampleInputFile">Elige Imagen</label>      
                 <input type="file" class="custom-file-input" id="Img" value="<?php echo $fila['imagen']?>">
+            </div>
             </div>
             
             <div class="container text-center">
