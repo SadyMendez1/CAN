@@ -45,6 +45,7 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">NOMBRE</th>
+                    <th scope="col">CANTIDAD</th>
                     <th scope="col">PRECIO</th>
                     <th scope="col"></th>
                 </tr>
@@ -61,6 +62,7 @@
                 <tr>
                     <th scope="row"><?php echo $fila['id']?></th>
                     <th scope="row"><?php echo $fila['nombre']?></th>
+                    <th scope="row"><?php echo $fila['cantidad']?></th>
                     <th scope="row"><?php echo $fila['precio']?></th>
                     <th scope="row">
                         <!--php?ID se conecta con editardatophp en $_REQUEST['ID']; $fila['id'] se conecta con la columna id de la db sys_can-->

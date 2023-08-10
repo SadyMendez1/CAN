@@ -56,6 +56,13 @@
                 <label class="form-label text-white">Nombre del producto</label>
                 <input type="text" class="form-control" placeholder="Nombre del Producto" name="NoProd" value="<?php echo $fila['nombre']?>">
             </div>
+
+
+            <div class="mb-3">
+                <label class="form-label text-white">Cantidad del producto</label>
+                <input type="text" class="form-control" placeholder="Cantidad del Producto" name="CantProd" value="<?php echo $fila['cantidad']?>">
+            </div>
+
             <div class="mb-3">
                 <label class="form-label text-white">Precio del producto</label>
                 <input type="text" class="form-control" placeholder="Precio del producto" name="Precio" value="<?php echo $fila['precio']?>">

@@ -43,9 +43,15 @@
 
                 <input type="text" class="form-control" placeholder="Nombre del producto" name="NoProd">
             </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Cantidad del Producto" name="CantProd">
+            </div>
+
             <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Precio" name="Precio">
             </div>
+            
             <div class="container text-center">
 
                 <button type="submit" class="btn bg-light border border-dark">Agregar Producto</button>

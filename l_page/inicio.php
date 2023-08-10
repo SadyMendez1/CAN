@@ -80,7 +80,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <a href="/CRUD_MYSQLI-clientes/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
-                    <h4>CRUD CLIENTESS</h4>
+                    <h4>CRUD CLIENTES</h4>
                 </div>
             </a>
 
