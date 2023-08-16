@@ -1,5 +1,5 @@
 <?php
-        require ('/pdf/fpdf.php');
+        require('pdf/fpdf.php');
 
         class PDF extends FPDF{
 
@@ -13,20 +13,20 @@
 
                 //letra
                 $this->Ln(10);
-                $this->SetFont('Arial','0',10);
+                $this->SetFont('Arial','B',10);
 
                 $this->Cell(-200);
             }
 
             function Footer(){
 
-                $this->SetFillColor(20,05,19);
+                $this->SetFillColor(20.05,19);
                 $this->Rect(0,270,220,30,'F');
                 $this->SetY(-20); //sube las letras
                 $this->SetFont('Arial','',10);
                 
                 $this->SetX(90);
-                $this->Write(5,'&copy; Sady Méndez - 2023');
+                $this->Write(5,'Sady Mendez - 2023');
                 $this->Ln();
             }
         }
@@ -43,10 +43,10 @@
         $pdf->Cell(59,9, 'Nombre',0,0,'C',1);
         $pdf->Cell(17,9, 'Apellido',0,0,'C',1);
         $pdf->Cell(50,9, 'Correo',0,1,'C',1);
-        $pdf->Cell(59,9, 'Teléfono',0,0,'C',1);
+        $pdf->Cell(59,9, 'Telefono',0,0,'C',1);
 
-        include('/Config/Conexion.php');
-        require('/Config/Conexion.php');
+        include('Config/Conexion.php');
+        require('Config/Conexion.php');
 
         $sql = "SELECT * FROM cliente";
         $resultado = mysqli_query($link, $sql);
@@ -56,10 +56,10 @@
 
         while($row = $resultado->fetch_assoc()){
             $pdf->SetX(45);
-            $pdf->Cell(59,9, $row['Nombre'],0,0,'C',1);
-            $pdf->Cell(17,9, $row['Apellido'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['Correo'],0,1,'C',1);
-            $pdf->Cell(59,9, $row['Teléfono'],0,0,'C',1);
+            $pdf->Cell(59,9, $row['nombre'],0,0,'C',1);
+            $pdf->Cell(17,9, $row['apellido'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['correo'],0,1,'C',1);
+            $pdf->Cell(59,9, $row['telefono'],0,0,'C',1);
     
         }
 

@@ -33,7 +33,7 @@
     <br>
     <div class="container">
         <a href="Forms/AgregarCliente.php" class="btn bg-light border border-dark">Agregar cliente</a>
-        <a href="/reportes.php" class="btn bg-light border border-dark">Imprimir Reporte</a>
+        <a href="reportes.php" class="btn bg-light border border-dark">Imprimir Reporte</a>
     </div>
     <br>
     <div class="container bg-light p-3 border border-dark rounded">
