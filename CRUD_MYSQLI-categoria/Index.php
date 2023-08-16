@@ -34,6 +34,7 @@
     <br>
     <div class="container">
         <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Agregar categoría</a>
+
     </div>
     <br>
     <div class="container bg-light p-3 border border-dark rounded">
