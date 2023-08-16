@@ -10,7 +10,7 @@
     $telefono = $_POST['Telefono'];
     $direccion = $_POST['Direccion'];
 
-    $sql = "UPDATE cliente SET CI='$ci', Nombre='$nombre', Apellido='$apellido', Correo ='$correo', Telefono='$telefono', Direccion='$direccion' WHERE id='$id'";
+    $sql = "UPDATE cliente SET CI='$ci', Nombre='$nombre', Apellido='$apellido', Correo ='$correo', Telefono='$telefono', Direccion='$direccion' WHERE idcliente='$id'";
 
     $query = mysqli_query($link, $sql);
 

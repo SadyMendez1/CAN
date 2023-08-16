@@ -2,7 +2,7 @@
     include_once('../Config/Conexion.php');
     $id = $_REQUEST['ID']; // 'ID' se conecta con el ID de la línea 49 de indexphp
 
-    $sql = "SELECT * FROM cliente WHERE cliente = '$id'";
+    $sql = "SELECT * FROM cliente WHERE idcliente = '$id'";
     $query = mysqli_query($link, $sql);
     $fila = mysqli_fetch_array($query);
 ?>
