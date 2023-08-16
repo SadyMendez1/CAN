@@ -40,10 +40,9 @@
         $pdf->SetX(45);
         $pdf->SetTextColor(255,255,255);
         $pdf->SetFillColor(79,59,120);
-        $pdf->Cell(59,9, 'Nombre',0,0,'C',1);
-        $pdf->Cell(17,9, 'Apellido',0,0,'C',1);
-        $pdf->Cell(50,9, 'Correo',0,1,'C',1);
-        $pdf->Cell(59,9, 'Telefono',0,0,'C',1);
+        $pdf->Cell(50,9, 'Nombre',0,0,'C',1);
+        $pdf->Cell(50,9, 'Correo',0,0,'C',1);
+        $pdf->Cell(50,9, 'Telefono',0,1,'C',1);
 
         include('Config/Conexion.php');
         require('Config/Conexion.php');
@@ -56,10 +55,9 @@
 
         while($row = $resultado->fetch_assoc()){
             $pdf->SetX(45);
-            $pdf->Cell(59,9, $row['nombre'],0,0,'C',1);
-            $pdf->Cell(17,9, $row['apellido'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['correo'],0,1,'C',1);
-            $pdf->Cell(59,9, $row['telefono'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['nombre'].''.$row['apellido'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['correo'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['telefono'],0,1,'C',1);
     
         }
 
