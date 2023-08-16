@@ -7,8 +7,9 @@
     $apellido = $_POST['ApellidoCliente'];
     $correo = $_POST['Correo'];
     $telefono = $_POST['Telefono'];
+    $direccion = $_POST['Direccion'];
 
-    $sql = "INSERT INTO cliente(ci,nombre,apellido,correo,telefono)VALUES('$ci','$nombre','$apellido','$correo','$telefono')";
+    $sql = "INSERT INTO cliente(ci,nombre,apellido,correo,telefono,direccion)VALUES('$ci','$nombre','$apellido','$correo','$telefono','$direccion')";
 
     $query = mysqli_query($link,$sql);
 

@@ -8,8 +8,9 @@
     $apellido = $_POST['ApellidoCliente'];
     $correo = $_POST['Correo'];
     $telefono = $_POST['Telefono'];
+    $direccion = $_POST['Direccion'];
 
-    $sql = "UPDATE cliente SET CI='$ci', Nombre='$nombre', Apellido='$apellido', Correo ='$correo', Telefono='$telefono' WHERE id='$id'";
+    $sql = "UPDATE cliente SET CI='$ci', Nombre='$nombre', Apellido='$apellido', Correo ='$correo', Telefono='$telefono', Direccion='$direccion' WHERE id='$id'";
 
     $query = mysqli_query($link, $sql);
 

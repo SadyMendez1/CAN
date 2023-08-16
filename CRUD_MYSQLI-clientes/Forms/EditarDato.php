@@ -2,7 +2,7 @@
     include_once('../Config/Conexion.php');
     $id = $_REQUEST['ID']; // 'ID' se conecta con el ID de la línea 49 de indexphp
 
-    $sql = "SELECT * FROM cliente WHERE id = '$id'";
+    $sql = "SELECT * FROM cliente WHERE cliente = '$id'";
     $query = mysqli_query($link, $sql);
     $fila = mysqli_fetch_array($query);
 ?>
@@ -49,7 +49,7 @@
 
         <!-- $fila['*'] se conecta con una columna de la db cliente  -->
 
-            <input type="Hidden" name="ID" value="<?php echo $fila['id']?>">
+            <input type="Hidden" name="ID" value="<?php echo $fila['idcliente']?>">
             <div class="mb-3">                
                 <label class="form-label text-white">CI</label>
                 <input type="text" class="form-control" placeholder="CI" name="CI" value="<?php echo $fila['ci']?>">
@@ -69,6 +69,10 @@
             <div class="mb-3">
                 <label class="form-label text-white">Telefono</label>
                 <input type="text" class="form-control" placeholder="Telefono" name="Telefono" value="<?php echo $fila['telefono']?>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label text-white">Direccion</label>
+                <input type="text" class="form-control" placeholder="Direccion" name="Direccion" value="<?php echo $fila['direccion']?>">
             </div>
             <div class="container text-center">
                 <button type="submit" class="btn bg-light border border-dark">Editar Cliente</button>

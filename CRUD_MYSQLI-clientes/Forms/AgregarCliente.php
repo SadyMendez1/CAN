@@ -52,6 +52,9 @@
             <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Teléfono" name="Telefono">
             </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Dirección" name="Direccion">
+            </div>
             <div class="container text-center">
                 <button type="submit" class="btn bg-light border border-dark">Agregar Cliente</button>
                 <a href="../Index.php" class="btn btn-dark">Regresar</a>
