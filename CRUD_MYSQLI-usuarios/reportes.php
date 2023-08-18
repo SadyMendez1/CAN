@@ -42,13 +42,14 @@
         $pdf->SetFillColor(79,59,120);
         $pdf->Cell(50,9, 'Nombre',0,0,'C',1);
         $pdf->Cell(50,9, 'Correo',0,0,'C',1);
-        $pdf->Cell(50,9, 'Telefono',0,0,'C',1);
-        $pdf->Cell(50,9, 'Direccion',0,1,'C',1);
+        $pdf->Cell(50,9, 'Usuario',0,0,'C',1);
+        $pdf->Cell(50,9, 'Contraseña',0,0,'C',1);
+        $pdf->Cell(50,9, 'Rol',0,1,'C',1);
 
         include('Config/Conexion.php');
         require('Config/Conexion.php');
 
-        $sql = "SELECT * FROM cliente";
+        $sql = "SELECT * FROM usuario";
         $resultado = mysqli_query($link, $sql);
 
         $pdf->SetTextColor(0,0,0);
@@ -61,8 +62,9 @@
 
             $pdf->Cell(50,9, $row['nombre'].' '.$row['apellido'],0,0,'C',1);
             $pdf->Cell(50,9, $row['correo'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['telefono'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['direccion'],0,1,'C',1);
+            $pdf->Cell(50,9, $row['usuario'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['pass'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['rol'],0,1,'C',1);
     
         }
 

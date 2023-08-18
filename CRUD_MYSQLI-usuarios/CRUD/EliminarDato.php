@@ -3,7 +3,7 @@
 
     $id = $_REQUEST['ID'];
 
-    $sql = "DELETE FROM empleados WHERE id = '$id'";
+    $sql = "DELETE FROM usuario WHERE idusuario = '$id'";
     
     $query = mysqli_query($link, $sql);
 

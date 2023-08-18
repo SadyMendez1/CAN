@@ -30,7 +30,7 @@
 
 <!--CRUD-->
 <div class="container bg-dark p-3 border border-dark rounded position-absolute">
-    <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN - Agregar empleado</h1>
+    <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN - Agregar usuario</h1>
 
     <br>
 
@@ -40,23 +40,27 @@
         <div class="mb-3">
 <!--el placeholder="*" es solo lo que se ve dentro del textbox; el name="*" se conectará con insertarphp en $_POST['*']-->       
 
-                <input type="text" class="form-control" placeholder="Nombre del empleado" name="NEmp">
+                <input type="text" class="form-control" placeholder="Nombre" name="NUs">
             </div>
             <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Apellido del empleado" name="AEmp">
+                <input type="text" class="form-control" placeholder="Apellido" name="AUs">
             </div>
-            <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Rol" name="ROL">
-            </div>          
             <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Correo" name="Correo">
             </div>
             <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Usuario" name="USUARIO">
+            </div>
+            <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Contraseña" name="Contraseña">
             </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Rol" name="ROL">
+            </div>          
+
             <div class="container text-center">
 
-                <button type="submit" class="btn bg-light border border-dark">Agregar Empleado</button>
+                <button type="submit" class="btn bg-light border border-dark">Agregar Usuario</button>
                 <a href="../Index.php" class="btn btn-dark">Regresar</a>
             </div>
         </form>

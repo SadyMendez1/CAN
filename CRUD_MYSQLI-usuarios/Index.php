@@ -37,6 +37,7 @@
     <br>
     <div class="container">
         <a href="Forms/AgregarUsuario.php" class="btn bg-light border border-dark">Agregar Usuario</a>
+        <a href="reportes.php" class="btn bg-light border border-dark">Imprimir Reporte</a>
     </div>
     <br>
     <div class="container bg-light p-3 border border-dark rounded">
@@ -44,13 +45,13 @@
         <table class="table">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col">ID</th>
+                    <!-- <th scope="col">ID</th> -->
                     <th scope="col">NOMBRE</th>
                     <th scope="col">CORREO</th>
                     <th scope="col">USUARIO</th>
                     <th scope="col">CONTRASEÑA</th>
                     <th scope="col">ROL</th>
-                    <th scope="col"></th>
+                    <th scope="col">ACCIONES</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,11 +64,11 @@
             while ($fila = mysqli_fetch_array($query)){
                 ?>
                 <tr>
-                    <th scope="row"><?php echo $fila['idusuario']?></th>
-                    <th scope="row"><?php echo $fila['nombre'].' '.$fila['apellido']?></th>
+                    <!-- <th scope="row"><?php /*echo $fila['idusuario']*/ ?></th> -->
+                    <th scope="row"><?php echo $fila['nombre'].' '.$fila['apellido'];?></th>
                     <th scope="row"><?php echo $fila['correo']?></th>
                     <th scope="row"><?php echo $fila['usuario']?></th>
-                    <th scope="row"><?php echo $fila['password']?></th>
+                    <th scope="row"><?php echo $fila['pass']?></th>
                     <th scope="row"><?php echo $fila['rol']?></th>
                     <th scope="row">
                         <!--php?ID se conecta con editardatophp en $_REQUEST['ID']; $fila['id'] se conecta con la columna id de la db sys_can-->

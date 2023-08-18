@@ -4,12 +4,12 @@
 
     $nombre = $_POST['NUs'];
     $apellido = $_POST['AUs'];
-    $usuario = $_POST['USUARIO'];
     $correo = $_POST['Correo'];
+    $usuario = $_POST['USUARIO'];
     $contraseña = $_POST['Contraseña'];
     $rol = $_POST['ROL'];
 
-    $sql = "INSERT INTO usuario(nombre,apellido,usuario,correo,pass,rol)VALUES('$nombre','$apellido','$usuario','$correo','$contraseña', '$rol')";
+    $sql = "INSERT INTO usuario(nombre,apellido,correo,usuario,pass,rol)VALUES('$nombre','$apellido','$correo','$usuario','$contraseña','$rol')";
 
     $query = mysqli_query($link,$sql);
 

@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar Empleado</title>
+    <title>Editar Usuario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     
     <link rel="stylesheet" href="/CRUD_MYSQLI-usuarios/estilos/estilos.css">
@@ -53,13 +53,15 @@
 
             <input type="Hidden" name="ID" value="<?php echo $fila['idusuario']?>">
 
+<!--el placeholder="*" es solo lo que se ve dentro del textbox; el name="*" se conectará con editarphp en $_POST['*']-->       
+
             <div class="mb-3">
                 <label class="form-label text-white">Nombre del Usuario</label>
-                <input type="text" class="form-control" placeholder="Nombre del empleado" name="NUs" value="<?php echo $fila['nombre']?>">
+                <input type="text" class="form-control" placeholder="Nombre" name="NUs" value="<?php echo $fila['nombre']?>">
             </div>
             <div class="mb-3">
                 <label class="form-label text-white">Apellido del Usuario</label>
-                <input type="text" class="form-control" placeholder="Apellido del cliente" name="AUs" value="<?php echo $fila['apellido']?>">
+                <input type="text" class="form-control" placeholder="Apellido" name="AUs" value="<?php echo $fila['apellido']?>">
             </div>
             <div class="mb-3">
             <label class="form-label text-white">Correo</label>
@@ -71,14 +73,14 @@
             </div>
             <div class="mb-3">
                 <label class="form-label text-white">Contraseña</label>
-                <input type="text" class="form-control" placeholder="Contraseña" name="Contraseña" value="<?php echo $fila['password']?>">
+                    <input type="text" class="form-control" placeholder="Contraseña" name="Contraseña" value="<?php echo $fila['pass']?>">
             </div>
             <div class="mb-3">
             <label class="form-label text-white">Rol</label>
-                <input type="text" class="form-control" placeholder="Rol" name="ROL" value="<?php echo $fila['rol']?>">
+            <input type="text" class="form-control" placeholder="Rol" name="ROL" value="<?php echo $fila['rol']?>">
             </div>
             <div class="container text-center">
-                <button type="submit" class="btn bg-light border border-dark">Editar Empleado</button>
+                <button type="submit" class="btn bg-light border border-dark">Editar Usuario</button>
                 <a href="../Index.php" class="btn btn-dark">Regresar</a>
             </div>
 
