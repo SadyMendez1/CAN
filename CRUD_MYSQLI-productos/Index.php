@@ -36,6 +36,7 @@
     <br>
     <div class="container">
         <a href="Forms/AgregarProducto.php" class="btn bg-light border border-dark">Agregar producto</a>
+        <a href="reportes.php" class="btn bg-light border border-dark">Imprimir Reporte</a>
     </div>
     <br>
     <div class="container bg-light p-3 border border-dark rounded">
@@ -44,9 +45,11 @@
             <thead class="table-dark">
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">NOMBRE</th>
-                    <th scope="col">CANTIDAD</th>
+                    <th scope="col">DESCRIPCIÓN</th>
+                    <th scope="col">PROVEEDOR</th>
                     <th scope="col">PRECIO</th>
+                    <th scope="col">STOCK</th>
+                    <th scope="col">IMAGEN</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -60,14 +63,17 @@
             while ($fila = mysqli_fetch_array($query)){
                 ?>
                 <tr>
-                    <th scope="row"><?php echo $fila['id']?></th>
-                    <th scope="row"><?php echo $fila['nombre']?></th>
-                    <th scope="row"><?php echo $fila['cantidad']?></th>
+                    <th scope="row"><?php echo $fila['idprod']?></th>
+                    <th scope="row"><?php echo $fila['descripcion']?></th>
+                    <th scope="row"><?php echo $fila['proveedor']?></th>
                     <th scope="row"><?php echo $fila['precio']?></th>
+                    <th scope="row"><?php echo $fila['stock']?></th>
+                    <th scope="row"><?php echo $fila['imagen']?></th>
+                    
                     <th scope="row">
                         <!--php?ID se conecta con editardatophp en $_REQUEST['ID']; $fila['id'] se conecta con la columna id de la db sys_can-->
-                        <a href="Forms/EditarDato.php?ID=<?php echo $fila['id']?>" class="btn text-white text-center bg-secondary">Editar Datos</a>
-                        <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['id']?>" class="btn btn-danger">Eliminar Datos</a>
+                        <a href="Forms/EditarDato.php?ID=<?php echo $fila['idprod']?>" class="btn text-white text-center bg-secondary">Editar Datos</a>
+                        <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['idprod']?>" class="btn btn-danger">Eliminar Datos</a>
                     </th>
                 </tr>
                 <?php

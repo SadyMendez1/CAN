@@ -40,15 +40,16 @@
         $pdf->SetX(5);
         $pdf->SetTextColor(255,255,255);
         $pdf->SetFillColor(79,59,120);
-        $pdf->Cell(50,9, 'Nombre',0,0,'C',1);
-        $pdf->Cell(50,9, 'Correo',0,0,'C',1);
-        $pdf->Cell(50,9, 'Telefono',0,0,'C',1);
-        $pdf->Cell(50,9, 'Direccion',0,1,'C',1);
+        $pdf->Cell(50,9, 'Descripcion',0,0,'C',1);
+        $pdf->Cell(50,9, 'Proveedor',0,0,'C',1);
+        $pdf->Cell(50,9, 'Precio',0,0,'C',1);
+        $pdf->Cell(50,9, 'Stock',0,0,'C',1);
+        $pdf->Cell(50,9, 'Imagen',0,1,'C',1);
 
         include('Config/Conexion.php');
         require('Config/Conexion.php');
 
-        $sql = "SELECT * FROM cliente";
+        $sql = "SELECT * FROM producto";
         $resultado = mysqli_query($link, $sql);
 
         $pdf->SetTextColor(0,0,0);
@@ -59,10 +60,11 @@
             
             // $pdf->Cell(50,9, $row['nombre'].' '.$row['apellido'],0,0,'C',1*hover azulcito*);
 
-            $pdf->Cell(50,9, $row['nombre'].' '.$row['apellido'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['correo'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['telefono'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['direccion'],0,1,'C',1);
+            $pdf->Cell(50,9, $row['descripcion'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['proveedor'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['precio'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['stock'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['imagen'],0,1,'C',1);
     
         }
 
