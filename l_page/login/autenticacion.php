@@ -7,7 +7,7 @@ session_start();
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'sys_can';
+$db = 'sistema';
 
 // conexion a la base de datos
 
@@ -31,7 +31,7 @@ if (!isset($_POST['username'], $_POST['password'])) {
 
 // evitar inyección sql
 
-if ($stmt = $link->prepare('SELECT id,password FROM accounts WHERE username = ?')) {
+if ($stmt = $link->prepare('SELECT iduser,password FROM usuario WHERE username = ?')) {
 
     // parámetros de enlace de la cadena s
 
@@ -59,7 +59,7 @@ if ($stmt->num_rows > 0) {
         session_regenerate_id();
         $_SESSION['loggedin'] = TRUE;
         $_SESSION['name'] = $_POST['username'];
-        $_SESSION['id'] = $id;
+        $_SESSION['iduser'] = $id;
         header('Location: /l_page/inicio.php');
     }
 } else {

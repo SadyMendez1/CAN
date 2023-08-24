@@ -2,7 +2,7 @@
     include_once('../Config/Conexion.php');
     $id = $_REQUEST['ID']; // 'ID' se conecta con el ID de la línea 49 de indexphp
 
-    $sql = "SELECT * FROM usuario WHERE idusuario = '$id'";
+    $sql = "SELECT * FROM usuario WHERE iduser = '$id'";
     $query = mysqli_query($link, $sql);
     $fila = mysqli_fetch_array($query);
 ?>
@@ -51,7 +51,7 @@
 
         <!-- $fila['*'] se conecta con una columna de la db cliente  -->
 
-            <input type="Hidden" name="ID" value="<?php echo $fila['idusuario']?>">
+            <input type="Hidden" name="ID" value="<?php echo $fila['iduser']?>">
 
 <!--el placeholder="*" es solo lo que se ve dentro del textbox; el name="*" se conectará con editarphp en $_POST['*']-->       
 
@@ -65,15 +65,15 @@
             </div>
             <div class="mb-3">
             <label class="form-label text-white">Correo</label>
-                <input type="text" class="form-control" placeholder="Correo" name="Correo" value="<?php echo $fila['correo']?>">
+                <input type="text" class="form-control" placeholder="Correo" name="Correo" value="<?php echo $fila['email']?>">
             </div>
             <div class="mb-3">
             <label class="form-label text-white">Usuario</label>
-                <input type="text" class="form-control" placeholder="Usuario" name="USUARIO" value="<?php echo $fila['usuario']?>">
+                <input type="text" class="form-control" placeholder="Usuario" name="USUARIO" value="<?php echo $fila['username']?>">
             </div>
             <div class="mb-3">
                 <label class="form-label text-white">Contraseña</label>
-                    <input type="text" class="form-control" placeholder="Contraseña" name="Contraseña" value="<?php echo $fila['pass']?>">
+                    <input type="text" class="form-control" placeholder="Contraseña" name="Contraseña" value="<?php echo $fila['password']?>">
             </div>
             <div class="mb-3">
             <label class="form-label text-white">Rol</label>

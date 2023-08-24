@@ -10,7 +10,7 @@
     $contraseña = $_POST['Contraseña'];
     $rol = $_POST['ROL'];
 
-    $sql = "UPDATE usuario SET Nombre='$nombre', Apellido='$apellido', Correo='$correo', Usuario='$usuario', Pass='$contraseña', Rol='$rol' WHERE idusuario='$id'";
+    $sql = "UPDATE usuario SET Nombre='$nombre', Apellido='$apellido', Email='$correo', Username='$usuario', Password='$contraseña', Rol='$rol' WHERE iduser='$id'";
 
     $query = mysqli_query($link, $sql);
 

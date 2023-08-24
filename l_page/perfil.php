@@ -17,7 +17,7 @@ if (!isset($_SESSION['loggedin'])) {
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'sys_can';
+$db = 'sistema';
 
 // conexion a la base de datos
 
@@ -30,9 +30,9 @@ if (mysqli_connect_error()) {
     exit('Fallo en la conexión de MySQL:' . mysqli_connect_error());
 }
 
-$stmt = $link->prepare('SELECT password, email FROM accounts WHERE id = ?');
+$stmt = $link->prepare('SELECT password, email FROM usuario WHERE iduser = ?');
 
-$stmt->bind_param('i', $_SESSION['id']);
+$stmt->bind_param('i', $_SESSION['iduser']);
 $stmt->execute();
 $stmt->bind_result($password, $email);
 $stmt->fetch();
@@ -88,10 +88,10 @@ $stmt->close();
                 </div>
             </a>
             
-            <a href="/CRUD_MYSQLI-employees/index.php">
+            <a href="/CRUD_MYSQLI-usuarios/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
-                    <h4>CRUD EMPLEADOS</h4>
+                    <h4>CRUD USUARIOS</h4>
                 </div>
             </a>
 
@@ -150,6 +150,7 @@ $stmt->close();
     <p>
         La siguiente es la información registrada en tu cuenta
     </p>
+    
     <table>
         <tr>
             <td>Usuario:</td>

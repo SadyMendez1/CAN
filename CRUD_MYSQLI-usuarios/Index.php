@@ -66,14 +66,14 @@
                 <tr>
                     <!-- <th scope="row"><?php /*echo $fila['idusuario']*/ ?></th> -->
                     <th scope="row"><?php echo $fila['nombre'].' '.$fila['apellido'];?></th>
-                    <th scope="row"><?php echo $fila['correo']?></th>
-                    <th scope="row"><?php echo $fila['usuario']?></th>
-                    <th scope="row"><?php echo $fila['pass']?></th>
+                    <th scope="row"><?php echo $fila['email']?></th>
+                    <th scope="row"><?php echo $fila['username']?></th>
+                    <th scope="row"><?php echo $fila['password']?></th>
                     <th scope="row"><?php echo $fila['rol']?></th>
                     <th scope="row">
                         <!--php?ID se conecta con editardatophp en $_REQUEST['ID']; $fila['id'] se conecta con la columna id de la db sys_can-->
-                        <a href="Forms/EditarDato.php?ID=<?php echo $fila['idusuario']?>" class="btn text-white text-center bg-secondary">Editar Datos</a>
-                        <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['idusuario']?>" class="btn btn-danger">Eliminar Datos</a>
+                        <a href="Forms/EditarDato.php?ID=<?php echo $fila['iduser']?>" class="btn text-white text-center bg-secondary">Editar Datos</a>
+                        <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['iduser']?>" class="btn btn-danger">Eliminar Datos</a>
                     </th>
                 </tr>
                 <?php

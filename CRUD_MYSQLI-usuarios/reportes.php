@@ -61,9 +61,9 @@
             // $pdf->Cell(50,9, $row['nombre'].' '.$row['apellido'],0,0,'C',1*hover azulcito*);
 
             $pdf->Cell(50,9, $row['nombre'].' '.$row['apellido'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['correo'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['usuario'],0,0,'C',1);
-            $pdf->Cell(50,9, $row['pass'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['email'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['username'],0,0,'C',1);
+            $pdf->Cell(50,9, $row['password'],0,0,'C',1);
             $pdf->Cell(50,9, $row['rol'],0,1,'C',1);
     
         }

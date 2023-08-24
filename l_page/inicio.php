@@ -86,10 +86,10 @@ if (!isset($_SESSION['loggedin'])) {
 
 
             
-            <a href="/CRUD_MYSQLI-employees/index.php">
+            <a href="/CRUD_MYSQLI-usuarios/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
-                    <h4>CRUD EMPLEADOS</h4>
+                    <h4>CRUD USUARIOS</h4>
                 </div>
             </a>
 

@@ -9,7 +9,7 @@
     $contraseña = $_POST['Contraseña'];
     $rol = $_POST['ROL'];
 
-    $sql = "INSERT INTO usuario(nombre,apellido,correo,usuario,pass,rol)VALUES('$nombre','$apellido','$correo','$usuario','$contraseña','$rol')";
+    $sql = "INSERT INTO usuario(nombre,apellido,email,username,password,rol)VALUES('$nombre','$apellido','$correo','$usuario','$contraseña','$rol')";
 
     $query = mysqli_query($link,$sql);
 
