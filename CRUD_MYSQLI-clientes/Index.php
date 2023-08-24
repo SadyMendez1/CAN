@@ -48,8 +48,8 @@
                     <th scope="col">CORREO</th>
                     <th scope="col">TELEFONO</th>
                     <th scope="col">DIRECCIÓN</th>
-                    <th scope="col">ACCIONES</th>
-                </tr>
+                    <th scope="col">ACCIONESS</th>
+                </tr>  
             </thead>
             <tbody>
 
