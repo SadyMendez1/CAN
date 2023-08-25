@@ -100,14 +100,7 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
             </a>
 
-            <a href="/CRUD_MYSQLI-categoria/index.php">
-                <div class="option">
-                    <i class="far fa-file" title="Portafolio"></i>
-                    <h4>CRUD CATEGORIA</h4>
-                </div>
-            </a>
-
-            <a href="#">
+            <a href="/CRUD_MYSQLI-proveedores/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
                     <h4>CRUD PROVEEDORES</h4>
