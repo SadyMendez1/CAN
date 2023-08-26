@@ -64,15 +64,23 @@
 
             <?php
             include ("Config/Conexion.php");
-            $sql = 'SELECT * FROM categoria';
+            $sql = 'SELECT * FROM ventas';
             $query = mysqli_query($link, $sql);
             
             while ($fila = mysqli_fetch_array($query)){
                 ?>
                 <tr>
                     <th scope="row"><?php echo $fila['id']?></th>
-                    <th scope="row"><?php echo $fila['nombre']?></th>
-                    <th scope="row"><?php echo $fila['imagen']?></th>
+                    <th scope="row"><?php echo $fila['fecha creacion']?></th>
+                    <th scope="row"><?php echo $fila['codigo']?></th>
+                    <th scope="row"><?php echo $fila['cliente']?></th>
+                    <th scope="row"><?php echo $fila['producto']?></th>
+                    <th scope="row"><?php echo $fila['monto']?></th>
+                    <th scope="row"><?php echo $fila['codigo']?></th>
+
+
+
+
                     <th scope="row">
                         <!--php?ID se conecta con editardatophp en $_REQUEST['ID']; $fila['id'] se conecta con la columna id de la db sys_can-->
                         <a href="Forms/EditarDato.php?ID=<?php echo $fila['id']?>" class="btn text-white text-center bg-secondary">Editar Datos</a>

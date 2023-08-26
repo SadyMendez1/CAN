@@ -73,7 +73,7 @@
                     <th scope="row">
                         <!--php?ID se conecta con editardatophp en $_REQUEST['ID']; $fila['id'] se conecta con la columna id de la db sys_can-->
                         <a href="Forms/EditarDato.php?ID=<?php echo $fila['iduser']?>" class="btn text-white text-center bg-secondary">Editar Datos</a>
-                        <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['iduser']?>" class="btn btn-danger">Eliminar Datos</a>
+                        <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['iduser']?>"  onclick="return  confirm ('ESTA SEGURO'); false "class="btn btn-danger">Eliminar Datos</a>
                     </th>
                 </tr>
                 <?php
