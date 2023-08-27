@@ -43,12 +43,12 @@
             <thead class="table-dark">
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">FECHA CREACION</th>
-                    <th scope="col">CODIGO</th>
+                    <th scope="col">FECHA </th>
+                    <th scope="col">CODCLI</th>
                     <th scope="col">CLIENTE</th>
                     <th scope="col">PRODUCTO</th>
                     <th scope="col">MONTO</th>
-                    <th scope="col">CODIGO</th>
+                    
 
 
                     <th scope="col"></th>
@@ -70,22 +70,21 @@
             while ($fila = mysqli_fetch_array($query)){
                 ?>
                 <tr>
-                    <th scope="row"><?php echo $fila['id']?></th>
-                    <th scope="row"><?php echo $fila['fecha creacion']?></th>
-                    <th scope="row"><?php echo $fila['codigo']?></th>
+                    <th scope="row"><?php echo $fila['idventa']?></th>
+                    <th scope="row"><?php echo $fila['fecha']?></th>
+                    <th scope="row"><?php echo $fila['codcli']?></th>
                     <th scope="row"><?php echo $fila['cliente']?></th>
                     <th scope="row"><?php echo $fila['producto']?></th>
-                    <th scope="row"><?php echo $fila['monto']?></th>
-                    <th scope="row"><?php echo $fila['codigo']?></th>
+                    <th scope="row"><?php echo $fila['total']?></th>
+                  
 
 
 
 
                     <th scope="row">
                         <!--php?ID se conecta con editardatophp en $_REQUEST['ID']; $fila['id'] se conecta con la columna id de la db sys_can-->
-                        <a href="Forms/EditarDato.php?ID=<?php echo $fila['id']?>" class="btn text-white text-center bg-secondary">Editar Datos</a>
-                        <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['id']?>" class="btn btn-danger">Eliminar Datos</a>
-                    </th>
+                        <a href="Forms/EditarDato.php?ID=<?php echo $fila['id']?>" class="btn text-white text-center bg-secondary">generar factura</a>
+                        
                 </tr>
                 <?php
             }
