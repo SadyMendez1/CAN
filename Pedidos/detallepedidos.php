@@ -30,7 +30,7 @@
     <!--CRUD-->
 <div class="container bg-dark p-3 border border-dark rounded position-absolute">
 
-    <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN - Ventas</h1>
+    <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN -  detalle pedidos</h1>
     <br>
     <div class="container">
         <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Agregar Ventas</a>
@@ -44,7 +44,6 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">FECHA</th>
-                    <th scope="col">CODCLI</th>
                     <th scope="col">CLIENTE</th>
                     <th scope="col">PRODUCTO</th>
                     <th scope="col">CANTIDAD</th>
@@ -74,7 +73,6 @@
                 <tr>
                     <th scope="row"><?php echo $fila['idpedidos']?></th>
                     <th scope="row"><?php echo $fila['fecha']?></th>
-                    <th scope="row"><?php echo $fila['codcli']?></th>
                     <th scope="row"><?php echo $fila['cliente']?></th>
                     <th scope="row"><?php echo $fila['producto']?></th>
                     <th scope="row"><?php echo $fila['cantidad']?></th>
