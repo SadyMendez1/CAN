@@ -30,7 +30,7 @@
     <!--CRUD-->
 <div class="container bg-dark p-3 border border-dark rounded position-absolute">
 
-    <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN - Ventas</h1>
+    <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN - orden de Pedidos</h1>
     <br>
     <div class="container">
         <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Agregar Ventas</a>
