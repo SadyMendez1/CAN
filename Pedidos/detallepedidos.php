@@ -33,12 +33,14 @@
     <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN -  detalle pedidos</h1>
     <br>
     <div class="container">
-        <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Agregar Ventas</a>
+        <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Aceptar pedidos</a>
+        <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Rechazar pedidos</a>
 
     </div>
     <br>
     <div class="container bg-light p-3 border border-dark rounded">
-        <h1>Ventas</h1>
+        
+        <h1>detalle pedidos</h1>
         <table class="table">
             <thead class="table-dark">
                 <tr>
@@ -92,6 +94,7 @@
                 </tr>
                 <?php
             }
+            
                 ?>
             </tbody>
         </table>

@@ -64,7 +64,7 @@
 
 
 
-
+            <?php
             include ("Config/Conexion.php");
             $sql = 'SELECT * FROM pedidos';
             $query = mysqli_query($link, $sql);
