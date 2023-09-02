@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pedidos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CRUD_MYSQLI-categoria/estilos/estilos.css">
+    <link rel="stylesheet" href="/estilos/estilos.css">
 </head>
 
 <body style=" 
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #68bb7e;" >
+  background-color: #f0e5ff;" >
 
     <!--Círculo-->
     <div class="circulo"></div>
@@ -28,62 +28,83 @@
     <!--Fin Header-->
 
     <!--CRUD-->
-<div class="container bg-dark p-3 border border-dark rounded position-absolute">
 
-    <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN - consulta de Pedidos</h1>
+    
+<div class="table-responsive container bg-light p-3 border border-ligth rounded position-sticky">
+
+    <h1 class="bg-success p-2 text-white text-center rounded">SISTEMA CAN - consulta de Pedidos</h1>
     <br>
     <div class="container">
     
-        <a href="detallepedidos.php" class="btn bg-light border border-dark">consulta pedidos</a>
+        <a href="detallepedidos.php" class="btn bg-success text-white border border-light">consulta pedidos</a>
         
     </div>
     <br>
-    <div class="container bg-light p-3 border border-dark rounded">
-        <h1>Pedidos</h1>
+
+    <div class=" container bg-ligth p-3 border border-success rounded">
         <table class="table">
-            <thead class="table-dark">
+            <thead class="table-success">
                 <tr>
+                    
                     <th scope="col">ID</th>
-                    <th scope="col">FECHA </th>
-                    <th scope="col">PRODUCTO</th>
-                    <th scope="col">CANTIDAD</th>
+                    <th scope="col">CLIENTE</th>
+                    <th scope="col">FECHA</th>
+                    <th scope="col">HORA</th>
+                    <th scope="col">SUBTOTAL</th>
+                    <th scope="col">TOTAL</th>
+                    <th scope="col">ESTADODEPAGO</th>
                     <th scope="col">ESTADO</th>
-
-
                     <th scope="col"></th>
 
+                    <div class="container">
+			
+			<div class="row">
+				
+				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+					<b>Nombre: </b><input type="text" id="campo" name="campo" />
+					<input type="submit" id="enviar" name="enviar" value="Buscar" class="btn btn-info" />
+				</form>
+			</div>
+			
 
-
-
-
-
-                </tr>
+                    </tr>
             </thead>
             <tbody>
-            
-
-
 
             <?php
-            include ("Config/Conexion.php");
+
+            if(!empty($_POST))
+               {
+              $valor = $_POST['campo'];
+               if(!empty($valor)){
+                $where = "WHERE nombre LIKE '%$nombre'";
+               }
+               }
+
+
             $sql = 'SELECT * FROM pedidos';
             $query = mysqli_query($link, $sql);
             
             while ($fila = mysqli_fetch_array($query)){
                 ?>
                 <tr>
-                    <th scope="row"><?php echo $fila['idpedidos']?></th>
+                    <th scope="row"><?php echo $fila['idpedido']?></th>
+                    <th scope="row"><?php echo $fila['idcliente']?></th>
                     <th scope="row"><?php echo $fila['fecha']?></th>
-                    <th scope="row"><?php echo $fila['producto']?></th>
-                    <th scope="row"><?php echo $fila['cantidad']?></th>
+                    <th scope="row"><?php echo $fila['hora']?></th>
+                    <th scope="row"><?php echo $fila['subtotal']?></th>
+                    <th scope="row"><?php echo $fila['total']?></th>
+                    <th scope="row"><?php echo $fila['estadodepago']?></th>
                     <th scope="row"><?php echo $fila['estado']?></th>
-
 
 
                      
                     </th>
                 </tr>
                 <?php
+
+
+
             }
                 ?>
             </tbody>
@@ -102,6 +123,22 @@
         </div>
     </footer>
     <!--Fin Footer-->
+
+    if($lista_carrito== null){
+                $total=0;
+                foreach($lista_carrito as producto){
+               $idproducto=$producto['idproducto'];
+               $idproducto=$producto['nombre'];
+               $precio=$producto['precio'];
+               $subtotal=$cantidad * $precio;
+               $total=$subtotal;
+
+
+                }
+
+            }
+
+
 </body>
 
 </html>

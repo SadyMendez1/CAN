@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ventas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CRUD_MYSQLI-categoria/estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 
 <body style=" 
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #68bb7e;" >
+  background-color: #f0e5ff;" >
 
     <!--Círculo-->
     <div class="circulo"></div>
@@ -36,27 +36,21 @@
         <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Aceptar pedidos</a>
         <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Rechazar pedidos</a>
 
+        
+   
     </div>
     <br>
-    <div class="container bg-light p-3 border border-dark rounded">
+    <div class="table responsive container bg-light p-3 border border-dark rounded">
         
         <h1>detalle pedidos</h1>
         <table class="table">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">FECHA</th>
-                    <th scope="col">CLIENTE</th>
-                    <th scope="col">PRODUCTO</th>
+                <th scope="col">ID</th>
+                    <th scope="col">IDPEDIDO </th>
+                    <th scope="col">IDPRODUCTO</th>
                     <th scope="col">CANTIDAD</th>
                     <th scope="col">PRECIO</th>
-                    <th scope="col">SUBTOTAL</th>
-                    <th scope="col">IVA</th>
-                    <th scope="col">TOTAL</th>
-                    <th scope="col">ESTADO</th>
-                    <th scope="col"></th>
-
-
 
 
 
@@ -66,24 +60,20 @@
             <tbody>
 
             <?php
-            include ("Config/Conexion.php");
+            include ("Conexion.php");
             $sql = 'SELECT * FROM detpedidos';
             $query = mysqli_query($link, $sql);
             
             while ($fila = mysqli_fetch_array($query)){
                 ?>
                 <tr>
-                    <th scope="row"><?php echo $fila['idpedidos']?></th>
-                    <th scope="row"><?php echo $fila['fecha']?></th>
-                    <th scope="row"><?php echo $fila['cliente']?></th>
-                    <th scope="row"><?php echo $fila['producto']?></th>
+                    <th scope="row"><?php echo $fila['iddetalle']?></th>
+                    <th scope="row"><?php echo $fila['idpedido']?></th>
+                    <th scope="row"><?php echo $fila['idproducto']?></th>
                     <th scope="row"><?php echo $fila['cantidad']?></th>
                     <th scope="row"><?php echo $fila['precio']?></th>
-                    <th scope="row"><?php echo $fila['subtotal']?></th>
-                    <th scope="row"><?php echo $fila['iva']?></th>
-                    <th scope="row"><?php echo $fila['total']?></th>
-                    <th scope="row"><?php echo $fila['estado']?></th>
 
+                    echo '<input type="submit" formnovalidate class="btn btn-danger" name="btnRechazar" value="Rechazar">';
 
 
                     <th scope="row">
@@ -92,6 +82,9 @@
                         <a href="CRUD/EliminarDato.php?ID=<?php echo $fila['id']?>" class="btn btn-danger">rechazar</a>
                     </th>
                 </tr>
+
+
+                
                 <?php
             }
             
@@ -111,6 +104,7 @@
         </div>
     </footer>
     <!--Fin Footer-->
+    
 </body>
 
 </html>

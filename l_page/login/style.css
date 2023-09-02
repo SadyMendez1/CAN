@@ -16,7 +16,7 @@ body{
     padding: 3%;
     justify-content: center;
     align-items: center;
-    background: #68bb7e;
+    background:  #f0e5ff;;
     overflow: hidden;
 
 }
@@ -27,7 +27,7 @@ body{
     position: absolute;
     top: 1;
     left: 0;
-    background: #0B3B18;
+    background:   #f34f24;;
     clip-path: circle(650px at left 750px);
     width: 100%;
     height: 100%;
@@ -63,13 +63,13 @@ position: relative;
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: #0B3B18;
+    background-color: #f34f24;
     color: #ffffff;
 }
 .login form input[type="password"], .login form input[type="text"] {
     width: 310px;
     height: 50px;
-    border: 1px solid #dee0e4;
+    border: 1px solid #f34f24;
     margin-bottom: 20px;
     padding: 0 15px;
 }
@@ -77,7 +77,7 @@ position: relative;
     width: 100%;
     padding: 15px;
    margin-top: 20px;
-    background-color: #0B3B18;
+    background-color: #f34f24;
     border: 0;
     cursor: pointer;
     font-weight: bold;
@@ -85,7 +85,7 @@ position: relative;
     transition: background-color 0.2s;
 }
 .login form input[type="submit"]:hover {
-  background-color: #3a4937;
+  background-color: #f0e5ff;
     transition: background-color 0.2s;
 }
 
@@ -94,11 +94,11 @@ position: relative;
 
 .navtop {
     margin: auto;
-	background: #0B3B18;
+	background: #f0e5ff;
 	height: 70px;
     width: 90%;
 	border: 2px;
-    border-color: black;
+    border-color: #f0e5ff;
     border-radius:10px;
 }
 
@@ -160,7 +160,7 @@ body.loggedin {
 	padding: 25px 0;
 	font-size: 22px;
 	border-bottom: 1px solid #e0e0e3;
-	color: #1c1d22;
+	color: #f0e5ff;
 }
 .content > p, .content > div {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
@@ -173,7 +173,7 @@ body.loggedin {
 }
 .content > p table td:first-child, .content > div table td:first-child {
 	font-weight: bold;
-	color: #1c1d22;
+	color: #f0e5ff;
 	padding-right: 15px;
 }
 .content > div p {

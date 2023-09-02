@@ -41,7 +41,7 @@ svg:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
-    background: #0B3B18;
+    background:#f0e5ff;
     clip-path: circle(650px at left 750px);
     width: 100%;
     height: 100%;
@@ -64,7 +64,7 @@ header{
 }
 
 header .logo{
-    color: #1b1b1b;
+    color: #f0e5ff;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bolder;
@@ -85,7 +85,7 @@ header .btnGroup li{
 
 header .nav li a{
     text-decoration: none;
-    color: #1b1b1b;
+    color: #f0e5ff;
     font-size: 1em;
     font-weight: 500;
 }
@@ -97,7 +97,7 @@ header .btnGroup{
 
 header .btnGroup li .btnLogin {
     text-decoration: none;
-    color: #1b1b1b;
+    color: #f0e5ff;
     font-size: 1em;
     font-weight: 500;
 }
@@ -114,7 +114,7 @@ header .btnGroup li .btnRegistro {
 }
 
 header .btnGroup li .btnRegistro:hover {
-    background: #0B3B18;
+    background: #f34f24;
 }
 
 /* Contenido */
@@ -132,7 +132,7 @@ header .btnGroup li .btnRegistro:hover {
     font-family: 'Fredoka', sans-serif;
     font-size: 10em;
     padding: 10px;
-    color: #1b1b1b;
+    color: #f0e5ff;
     transition: 0.3s;
     text-shadow: 1px 1px 1px #ccc,
                 1px 2px 1px #ccc,
@@ -143,15 +143,15 @@ header .btnGroup li .btnRegistro:hover {
                 1px 7px 1px #ccc,
                 1px 8px 1px #ccc,
                 1px 9px 1px #ccc,
-                1px 10px 1px #ccc,
-                1px 18px 6px rgba(16, 14, 14, 0.4),
-                1px 22px 10px rgba(16, 14, 14, 0.2),
-                1px 25px 35px rgba(16, 14, 14, 0.2),
-                1px 30px 60px rgba(16, 14, 14, 0.4);
+                1px 10px 1px #f0e5ff,
+                1px 18px 6px rgba(225, 213, 243, 0.4),
+                1px 22px 10px rgba(238, 225, 248, 0.2),
+                1px 25px 35px rgba(234, 223, 247, 0.2),
+                1px 30px 60px rgba(233, 227, 251, 0.4);
 }
 
 .contenido h2 {
-    color: #1b1b1b;
+    color: #f0e5ff;
     font-size: 2em;
     font-weight: bolder;
     line-height: 2;
@@ -183,7 +183,7 @@ header .btnGroup li .btnRegistro:hover {
 }
 
 .contenido a:hover {
-    background: #cb7116;
+    background: #f34f24;
 }
 
 /* Footer */
@@ -212,11 +212,11 @@ footer .enlaces li {
 footer .enlaces li a {
     font-size: 1em;
     text-decoration: none;
-    color: #1b1b1b;
+    color: #f34f24#f0e5ff;
     font-weight: 500;
 }
 
 footer .copyright p {
-    color: #1b1b1b;
+    color: #f34f24;
     font-weight: 500;
 }

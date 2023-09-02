@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #68bb7e;" >
+  background-color: #f0e5ff;" >
 
     <!--Círculo-->
     <div class="circulo"></div>

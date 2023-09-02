@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ventas Facturas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CRUD_MYSQLI-categoria/estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 
 <body style=" 
@@ -28,6 +28,8 @@
     <!--Fin Header-->
 
     <!--CRUD-->
+
+    
 <div class="container bg-dark p-3 border border-dark rounded position-absolute">
 
     <h1 class="bg-secondary p-2 text-white text-center rounded">SISTEMA CAN - facturas</h1>
@@ -35,7 +37,13 @@
     <div class="container">
         <a href="Forms/AgregarCategoria.php" class="btn bg-light border border-dark">Agregar Facturas</a>
         <a href="reportes.php" class="btn bg-light border border-dark">Imprimir Reporte</a>
+
     </div>
+<div class="row">
+    <div class="col-md-5 offset-md-7 d-grid gap-2">
+    <button class=" btn btn-primary btn-lg">imprimir </button>
+    </div>
+   
     <br>
     <div class="container bg-light p-3 border border-dark rounded">
         <h1>Facturas</h1>
@@ -44,10 +52,10 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">FECHA </th>
-                    <th scope="col">CODCLI</th>
-                    <th scope="col">CLIENTE</th>
+                    <th scope="col">HORA </th>
+                    <th scope="col">IDCLIENTE</th>
                     <th scope="col">PRODUCTO</th>
-                    <th scope="col">MONTO</th>
+                    <th scope="col">TOTAL</th>
                     
 
 
@@ -63,7 +71,7 @@
             <tbody>
 
             <?php
-            include ("Config/Conexion.php");
+            include ("Conexion.php");
             $sql = 'SELECT * FROM ventas';
             $query = mysqli_query($link, $sql);
             
@@ -72,8 +80,8 @@
                 <tr>
                     <th scope="row"><?php echo $fila['idventa']?></th>
                     <th scope="row"><?php echo $fila['fecha']?></th>
-                    <th scope="row"><?php echo $fila['codcli']?></th>
-                    <th scope="row"><?php echo $fila['cliente']?></th>
+                    <th scope="row"><?php echo $fila['hora']?></th>
+                    <th scope="row"><?php echo $fila['idcliente']?></th>
                     <th scope="row"><?php echo $fila['producto']?></th>
                     <th scope="row"><?php echo $fila['total']?></th>
                   
