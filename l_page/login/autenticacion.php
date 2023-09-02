@@ -25,8 +25,10 @@ if (mysqli_connect_error()) {
 if (!isset($_POST['username'], $_POST['password'])) {
 
     // si no hay datos muestra error y re direccionar
+    
+    echo "<div>No se han introducido datos</div>";
 
-    header('Location: /l_page/login/login.html');
+    ('Location: /l_page/login/login.html');
 }
 
 // evitar inyección sql
@@ -65,7 +67,8 @@ if ($stmt->num_rows > 0) {
 } else {
 
     // usuario incorrecto
-    header('Location: /l_page/login/login.html');
+    echo "<div>Los datos introducidos son incorrectos</div>";
+    //header('Location: /l_page/login/login.html');
 }
 
 $stmt->close();

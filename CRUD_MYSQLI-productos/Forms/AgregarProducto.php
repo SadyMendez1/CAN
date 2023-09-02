@@ -40,20 +40,26 @@
         
         <div class="mb-3">
 <!--el placeholder="*" es solo lo que se ve dentro del textbox; el name="*" se conectará con insertarphp en $_POST['*']-->       
+            <input type="text" class="form-control" placeholder="Descripción del Producto" name="DesProd">
+        </div>
 
-                <input type="text" class="form-control" placeholder="Nombre del producto" name="NoProd">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Proveedor" name="Prov">
             </div>
 
             <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Cantidad del Producto" name="CantProd">
+                <input type="text" class="form-control" placeholder="Precio del producto" name="Precio">
             </div>
 
             <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Precio" name="Precio">
+                <input type="text" class="form-control" placeholder="Stock" name="Stock">
+            </div>
+
+            <div class="mb-3">
+                <input type="file" class="custom-file-input" placeholder="Elige Imagen" name="Img">
             </div>
             
             <div class="container text-center">
-
                 <button type="submit" class="btn bg-light border border-dark">Agregar Producto</button>
                 <a href="../Index.php" class="btn btn-dark">Regresar</a>
             </div>

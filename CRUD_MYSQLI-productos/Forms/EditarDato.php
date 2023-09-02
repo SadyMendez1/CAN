@@ -2,7 +2,7 @@
     include_once('../Config/Conexion.php');
     $id = $_REQUEST['ID']; // 'ID' se conecta con el ID de la línea 49 de indexphp
 
-    $sql = "SELECT * FROM producto WHERE id = '$id'";
+    $sql = "SELECT * FROM producto WHERE idprod = '$id'";
     $query = mysqli_query($link, $sql);
     $fila = mysqli_fetch_array($query);
 ?>
@@ -50,23 +50,35 @@
 
         <!-- $fila['*'] se conecta con una columna de la db cliente  -->
 
-            <input type="Hidden" name="ID" value="<?php echo $fila['id']?>">
+            <input type="Hidden" name="ID" value="<?php echo $fila['idprod']?>">
 
             <div class="mb-3">
-                <label class="form-label text-white">Nombre del producto</label>
-                <input type="text" class="form-control" placeholder="Nombre del Producto" name="NoProd" value="<?php echo $fila['nombre']?>">
+                <label class="form-label text-white">Descripción del producto</label>
+                <input type="text" class="form-control" placeholder="Descripción del Producto" name="DesProd" value="<?php echo $fila['descripcion']?>">
             </div>
 
-
             <div class="mb-3">
-                <label class="form-label text-white">Cantidad del producto</label>
-                <input type="text" class="form-control" placeholder="Cantidad del Producto" name="CantProd" value="<?php echo $fila['cantidad']?>">
+                <label class="form-label text-white">Proveedor</label>
+                <input type="text" class="form-control" placeholder="Proveedor" name="Prov" value="<?php echo $fila['proveedor']?>">
             </div>
 
             <div class="mb-3">
                 <label class="form-label text-white">Precio del producto</label>
                 <input type="text" class="form-control" placeholder="Precio del producto" name="Precio" value="<?php echo $fila['precio']?>">
             </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Stock</label>
+                <input type="text" class="form-control" placeholder="Stock" name="Stock" value="<?php echo $fila['stock']?>">
+            </div>
+
+            <div class="input-group">
+            <div class="custom-file">      
+                <label class="custom-file-label" for="exampleInputFile">Elige Imagen</label>      
+                <input type="file" class="custom-file-input" id="Img" value="<?php echo $fila['imagen']?>">
+            </div>
+            </div>
+
             
             <div class="container text-center">
                 <button type="submit" class="btn bg-light border border-dark">Editar Producto</button>

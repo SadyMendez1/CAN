@@ -3,7 +3,7 @@
 
     $id = $_REQUEST['ID'];
 
-    $sql = "DELETE FROM producto WHERE id = '$id'";
+    $sql = "DELETE FROM producto WHERE idprod = '$id'";
     
     $query = mysqli_query($link, $sql);
 
