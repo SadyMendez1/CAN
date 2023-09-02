@@ -48,7 +48,7 @@ $stmt->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Página de Inicio - Sistema CAN</title>
+    <title>Información del Usuario</title>
 
     <!--Estilos CSS-->
     <link rel="stylesheet" href="/l_page/estilos/estilos_.css">
@@ -72,56 +72,81 @@ $stmt->close();
 
         <a href="/l_page/inicio.php">
         <div class="name__page">
-            <!--clase de icono de HOME, o sea lo que vamos a cambiar por CAN, VEASE EL TÍTULO-->
+            <!--clase de icono de HOME, o sea lo que vamos a cambiar por CGB, VEASE EL TÍTULO-->
             <i class="fas fa-home" title="Inicio"></i>
-            <h3>CAN - Inicio</h3>
+            <h3>CGB - Inicio</h3>
         </div>
-        </a>
+    </a>
 
 
-        <div class="options__menu">	
+     <div class="options__menu">	
+        <scroll-container>
 
-            <a href="/CRUD_MYSQLI-clientes/index.php">
+                <scroll-page id="page-1">
+                <a href="/CRUD_MYSQLI-clientes/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
                     <h4>CRUD CLIENTES</h4>
                 </div>
-            </a>
-            
-            <a href="/CRUD_MYSQLI-usuarios/index.php">
+                </a>
+                </scroll-page>
+
+                <scroll-page id="page-2">
+                <a href="/CRUD_MYSQLI-usuarios/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
                     <h4>CRUD USUARIOS</h4>
                 </div>
-            </a>
+                </a>
+                </scroll-page>
 
-            <a href="/CRUD_MYSQLI-productos/index.php">
+                <scroll-page id="page-3">
+                <a href="/CRUD_MYSQLI-productos/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
                     <h4>CRUD PRODUCTOS</h4>
                 </div>
-            </a>
+                </a>
+                </scroll-page>
 
-            <a href="/CRUD_MYSQLI-proveedores/index.php">
+                <scroll-page id="page-4">
+                <a href="/CRUD_MYSQLI-proveedores/index.php">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
                     <h4>CRUD PROVEEDORES</h4>
                 </div>
-            </a>
+                </a>
+                </scroll-page>
 
-            <a href="#">
+                <scroll-page id="page-5">
+                <a href="/CRUD_MYSQLI-categoria/index.php">
+                <div class="option">
+                    <i class="far fa-file" title="Portafolio"></i>
+                    <h4>CRUD CATEGORIA</h4>
+                </div>
+                </a>
+                </scroll-page>
+
+                <scroll-page id="page-6">
+                <a href="#">
                 <div class="option">
                     <i class="far fa-sticky-note" title="Blog"></i>
                     <h4>PEDIDOS PENDIENTES</h4>
                 </div>
-            </a>
+                </a>
+                </scroll-page>
 
-            <a href="#">
+                <scroll-page id="page-7">
+                <a href="#">
                 <div class="option">
                     <i class="far fa-sticky-note" title="Blog"></i>
                     <h4>PEDIDOS ASIGNADOS</h4>
                 </div>
-            </a>
+                </a>
+                </scroll-page>
+        </scroll-container>
+
+
 
             <a href="/l_page/perfil.php">
                 <div class="option">
@@ -129,44 +154,31 @@ $stmt->close();
                     <h4>Información de Usuario</h4>
                 </div>
             </a>
-
-            
             <a href="/l_page/login/cerrar_sesion.php">
                 <div class="option">
                     <i class="fa fa-sign-out-alt" title="Cerrar Sesión"></i>
                     <h4>Cerrar Sesión</h4>
                 </div>
-            </a> 
-
-        </div>
-
+            </a>  
     </div>
-
+</div>
     <main>
-    <div class="content">
-
-    <h2>Información del Usuario</h2>
-    <div>
-    <p>
-        La siguiente es la información registrada en tu cuenta
-    </p>
-    
+<div class="content">
+        <h1>Información del Usuario</h1><br>
+    <div class="container bg-light p-3 border border-dark rounded">
+        <p>La siguiente es la información registrada en tu cuenta.</p>
+    <br>
     <table>
         <tr>
-            <td>Usuario:</td>
+            <td>Usuario:        </td>
             <td><?= $_SESSION['name'] ?></td>
         </tr>
         <tr>
-            <td>Email:</td>
+            <td>Email:  </td>
             <td><?= $email ?></td>
         </tr>
     </table>
-
-
-
-</div>
-
-
+    </div>
 </div>
 
 
@@ -180,7 +192,7 @@ $stmt->close();
             <li><a href="#">Política de Privacidad</a></li>
         </ul>-->
         <div class="copyright">
-            <p>&copy; Sady Méndez - 2023</p>
+        <p>&copy; Sady Méndez - 2023 <br> Todos los derechos reservados.</p>
         </div>
     </footer>
 

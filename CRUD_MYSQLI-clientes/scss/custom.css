@@ -220,6 +220,9 @@ body {
   align-items: center;
   background-color: #68bb7e;
 
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
 }
 
 /* Círculo */
@@ -12060,14 +12063,17 @@ textarea.form-control-lg {
 /* Footer */
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 150px;
-  display: flex;
+  padding: 1em;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+
+  /*margin-top: auto;*/
+
+  height: 100px;
+  display: flex;
 }
 
 footer .copyright p {
